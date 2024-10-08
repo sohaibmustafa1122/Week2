@@ -83,3 +83,42 @@ Transactions involving CNP, especially e-commerce purchases, have consistently h
  The growth of the internet and the explosion of e-commerce has been a major factor in the evolution of card fraud. As more people shop online, fraudsters have shifted their focus to exploiting weaknesses in digital payment systems. Internet-based transactions are inherently more vulnerable because they rely on less secure verification methods compared to in-person payments. However, technologies like biometric authentication and the aforementioned tokenization are being implemented to improve security in online transactions.
  Preventing data breaches has become crucial in the fight against card fraud. When a company suffers a data breach, millions of card details can be exposed, leading to a sharp rise in fraud. One way to prevent this is through card tokenization, which helps ensure that even if hackers access transaction data, they cannot use it to commit fraud. Tokenization replaces sensitive card details with a unique token that is only usable by the authorized parties involved in the transaction, making it useless to anyone else.
  Hence, between 2008 and 2019, the card fraud landscape has shifted significantly, with card-present fraud declining due to the introduction of EMV technology, while CNP fraud has risen sharply alongside the growth of e-commerce. Regulatory measures like PSD2 and technologies like tokenization and biometric authentication have played key roles in mitigating these risks, but the continued evolution of digital payments means that the battle against fraud is ongoing. The challenge remains to stay ahead of fraudsters in an increasingly interconnected world.
+
+
+
+
+## Task 4 Wazuh SIEM Task
+During this task, I attempted to deploy Wazuh using Docker, focusing on setting up the Wazuh Manager, Indexer, and Dashboard. Unfortunately, the system crashed before completing the File Integrity Monitoring (FIM) section. Below are the answers to the questions based on my experience until that point.
+
+### 1. What rule descriptions did you get?
+I was unable to complete the File Integrity Monitoring (FIM) process as my system crashed during the deployment phase. However, from reading, typical Wazuh rule descriptions for FIM include:
+
+Rule 554 (File added): Triggers when a file is added.
+Rule 555 (File modified): Triggers when a file is modified.
+Rule 556 (File deleted): Triggers when a file is deleted.
+
+### 2. What are the MITRE ATT&CK techniques (include ID) Wazuh reports for these events?
+Since the FIM process couldn't be completed due to the system crash, I couldn’t generate specific MITRE ATT&CK techniques for this instance. Based on my understanding of Wazuh:
+
+T1070.004 (Indicator Removal on Host: File Deletion) is commonly reported when files are deleted.
+T1027 (Obfuscated Files or Information) may be triggered if a file is modified in an attempt to conceal malicious activity.
+
+
+### 3. What is the reported MITRE technique for deleting files or directories inside monitored directories?
+Though I couldn't finish the deployment, the technique typically reported by Wazuh for file deletion is:
+
+T1070.004 (Indicator Removal on Host: File Deletion).
+This technique is related to adversaries trying to cover their tracks by removing files or indicators of their presence.
+
+### 4. Explain in your own words where, when, and why these systems should be used, and would they be helpful in banking?
+Although I couldn’t fully deploy Wazuh, File Integrity Monitoring (FIM) systems are vital in any organization that handles sensitive data, especially in industries like banking. Here’s why:
+
+Data Security: FIM systems help detect unauthorized changes to critical files, ensuring data integrity.
+Compliance: Many financial regulations (like PCI-DSS) require organizations to monitor files for integrity.
+Incident Detection: FIM systems can help detect breaches early, minimizing the impact of attacks.
+In the banking sector, these systems would be particularly helpful in monitoring critical files like customer data, financial transaction logs, and configuration files to ensure no unauthorized changes are made.
+
+### 5. Add a screenshot of your integrity monitoring events tab.
+Unfortunately, I could not reach the point of generating the screenshots for the integrity monitoring events. My system crashed during the deployment phase, causing the process to halt, and I ran out of memory before completing the task.
+
+
